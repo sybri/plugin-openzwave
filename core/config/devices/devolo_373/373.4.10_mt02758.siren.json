@@ -1,0 +1,191 @@
+{
+    "name": "Siren MT02758", 
+    "type": "Sirène", 
+    "comlink": "", 
+    "remark": "Sélection du son présentement non supporté", 
+    "imglink": "devolo.mt02758", 
+    "commands": [
+        {
+            "name": "Etat", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 37, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1
+            }, 
+            "subtype": "binary", 
+            "display": {
+                "invertBinary": 1, 
+                "generic_type": "DONT"
+            }, 
+            "template": {
+                "dashboard": "alert", 
+                "mobile": "alert"
+            }, 
+            "unite": ""
+        }, 
+        {
+            "name": "On", 
+            "type": "action", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 37, 
+                "value": "type=setvalue&value=255", 
+                "index": 0, 
+                "instance": 1
+            },
+            "value": "Etat",
+            "subtype": "other", 
+            "display": {
+                "generic_type": "DONT"
+            }
+        }, 
+        {
+            "name": "Off", 
+            "type": "action", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 37, 
+                "value": "type=setvalue&value=0", 
+                "index": 0, 
+                "instance": 1
+            },
+            "value": "Etat",
+            "subtype": "other", 
+            "display": {
+                "generic_type": "DONT"
+            }
+        }, 
+        {
+            "name": "Emergency", 
+            "type": "action", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 38, 
+                "value": "type=setvalue&value=Emergency", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 99
+            }, 
+            "subtype": "other", 
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        }, 
+        {
+            "name": "Fire", 
+            "type": "action", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 38, 
+                "value": "type=setvalue&value=Fire", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 99
+            }, 
+            "subtype": "other", 
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        }, 
+        {
+            "name": "Ambulance", 
+            "type": "action", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 38, 
+                "value": "type=setvalue&value=Ambulance", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 99
+            }, 
+            "subtype": "other", 
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        }, 
+        {
+            "name": "Police", 
+            "type": "action", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 38, 
+                "value": "type=setvalue&value=Police", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 99
+            }, 
+            "subtype": "other", 
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        }, 
+        {
+            "name": "Door chime", 
+            "type": "action", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 38, 
+                "value": "type=setvalue&value=Door chime", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 99
+            }, 
+            "subtype": "other", 
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        }, 
+        {
+            "name": "Beep Beep", 
+            "type": "action", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 38, 
+                "value": "type=setvalue&value=Beep Beep", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 99
+            }, 
+            "subtype": "other", 
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        }, 
+        {
+            "name": "Stop", 
+            "type": "action", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 38, 
+                "value": "type=setvalue&value=Stop", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 99
+            }, 
+            "subtype": "other", 
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "name": "Smart Smoke Sensor (DX1SA-Z)", 
+    "type": "Fumée", 
+    "comlink": "", 
+    "remark": "", 
+    "imglink": "domux.dx1saz", 
+    "commands": [
+        {
+            "name": "Fumées", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 113, 
+                "value": "", 
+                "index": 1, 
+                "instance": 1
+            }, 
+            "subtype": "binary", 
+            "display": {
+                "invertBinary": "1", 
+                "generic_type": "SMOKE"
+            }, 
+            "template": {
+                "dashboard": "feu", 
+                "mobile": "feu"
+            }
+        }
+    ]
+}

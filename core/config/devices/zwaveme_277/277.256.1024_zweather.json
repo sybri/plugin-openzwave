@@ -1,132 +1,134 @@
 {
-    "name": "Z-Weather Wind and Weather Sensor",
-    "doc": "",
-    "type": "Multicapteurs",
-    "comlink": "2961-popp-station-meteo-z-wave-z-weather",
-    "remark": "Vendu sous le nom POPP - Station météo Z-Wave+ Z-Weather",
-    "imglink": "popp.zweather",
-    "battery_type": "Cellule solaire",
+    "name": "Z-Weather Wind and Weather Sensor", 
+    "type": "Multicapteurs", 
+    "comlink": "2961-popp-station-meteo-z-wave-z-weather", 
+    "remark": "Vendu sous le nom POPP - Station météo Z-Wave+ Z-Weather", 
+    "imglink": "popp.zweather", 
     "commands": [
         {
-            "name": "Température",
-            "type": "info",
-            "subtype": "numeric",
+            "name": "Température", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 1, 
+                "instance": 1
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "TEMPERATURE"
-            },
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "°C",
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "index": "1",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "°C"
+        }, 
         {
-            "name": "Luminosité",
-            "type": "info",
-            "subtype": "numeric",
+            "name": "Luminosité", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 3, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BRIGHTNESS"
-            },
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "%",
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "maxValue": 100,
-                "minValue": 0,
-                "index": "3",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "%"
+        }, 
         {
-            "name": "Humidité",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
+            "name": "Humidité", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 5, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "HUMIDITY"
-            },
-            "unite": "%",
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "index": "5",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "%"
+        }, 
         {
-            "name": "Vitesse du vent",
-            "type": "info",
-            "subtype": "numeric",
+            "name": "Vitesse du vent", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 6, 
+                "instance": 1
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "WIND_SPEED"
-            },
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "m\/s",
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "index": "6",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "m/s"
+        }, 
         {
-            "name": "Pression barométrique",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
+            "name": "Pression barométrique", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 9, 
+                "instance": 1
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "PRESSURE"
-            },
-            "isHistorized": 1,
-            "unite": "kPa",
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "index": "9",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "kPa"
+        }, 
         {
-            "name": "Point de rosée",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
+            "name": "Point de rosée", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 11, 
+                "instance": 1
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "GENERIC"
-            },
-            "isHistorized": 1,
-            "unite": "°C",
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "index": "11",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "°C"
+        }, 
         {
-            "name": "Batterie",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 0,
+            "name": "Batterie", 
+            "type": "info", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 128, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BATTERY"
-            },
-            "isHistorized": 0,
-            "unite": "%",
-            "configuration": {
-                "class": 128,
-                "value": "",
-                "index": "0",
-                "instance": 1
-            }
+            }, 
+            "unite": "%"
         }
     ]
 }

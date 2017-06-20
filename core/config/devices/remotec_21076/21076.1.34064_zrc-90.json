@@ -1,83 +1,94 @@
 {
-    "name": "ZRC-90",
-    "doc": "",
-    "type": "Contrôleur portable",
-    "comlink": "",
-    "remark": "Partiellement compatible: Fonctionne en association directe seulement",
-    "imglink": "remotec.zrc90",
-    "battery_type": "2x1.5V AAA",
-    "ignore": 0,
+    "name": "ZRC-90", 
+    "type": "Contrôleur portable", 
+    "comlink": "", 
+    "remark": "",
+    "imglink": "remotec.zrc90", 
     "commands": [
         {
-            "name": "SceneNumber",
+            "name": "Scene",
             "type": "info",
-            "subtype": "numeric",
             "isVisible": 0,
             "isHistorized": 0,
-            "unite": "",
-            "display": {
-                "generic_type": "DONT"
-            },
             "configuration": {
                 "class": 91,
                 "value": "",
-                "repeatEventManagement" : "always",
-                "index": "128",
-                "instance": 1
+                "index": 128,
+                "instance": 1,
+                "repeatEventManagement": "always"
+            },
+            "subtype": "numeric",
+            "display": {
+                "generic_type": "DONT"
+            },
+            "unite": "",
+            "template": {
+                "dashboard": "badge",
+                "mobile": "badge"
             }
         },
-         {
+        {
             "name": "SceneID",
             "type": "info",
-            "subtype": "numeric",
             "isVisible": 0,
             "isHistorized": 0,
-            "unite": "",
-            "display": {
-                "generic_type": "DONT"
-            },
             "configuration": {
                 "class": 91,
                 "value": "",
-                "repeatEventManagement" : "always",
-                "index": "2",
-                "instance": 1
+                "index": 2,
+                "instance": 1,
+                "repeatEventManagement": "always"
+            },
+            "subtype": "numeric",
+            "display": {
+                "generic_type": "DONT"
+            },
+            "unite": "",
+            "template": {
+                "dashboard": "badge",
+                "mobile": "badge"
             }
         },
         {
             "name": "SceneAttribute",
             "type": "info",
-            "subtype": "string",
             "isVisible": 0,
             "isHistorized": 0,
-            "unite": "",
-            "display": {
-                "generic_type": "DONT"
-            },
             "configuration": {
                 "class": 91,
                 "value": "",
-                "repeatEventManagement" : "always",
-                "index": "1",
-                "instance": 1
+                "index": 1,
+                "instance": 1,
+                "repeatEventManagement": "always"
+            },
+            "subtype": "string",
+            "display": {
+                "generic_type": "DONT"
+            },
+            "unite": "",
+            "template": {
+                "dashboard": "badge",
+                "mobile": "badge"
             }
         },
         {
-            "name": "Batterie",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 0,
-            "isHistorized": 0,
-            "unite": "%",
+            "name": "Batterie", 
+            "type": "info", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 128, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BATTERY"
-            },
-            "configuration": {
-                "class": 128,
-                "value": "",
-                "index": "0",
-                "instance": 1
-            }
+            }, 
+            "unite": "%"
         }
     ]
 }

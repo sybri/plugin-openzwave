@@ -1,107 +1,107 @@
 {
-    "name": "DCH-Z110",
-    "doc": "dlink.dchz110_-_3en1_Ouverture",
-    "type": "Ouverture",
-    "comlink": "3692-d-link-capteur-de-portefenetre-z-wave-3-en-1-790069409844",
-    "remark": "",
-    "imglink": "dlink.dchz110",
-    "battery_type": "1x3V CR123A",
+    "name": "DCH-Z110", 
+    "type": "Ouverture", 
+    "comlink": "3692-d-link-capteur-de-portefenetre-z-wave-3-en-1-790069409844", 
+    "remark": "", 
+    "imglink": "dlink.dchz110", 
     "commands": [
         {
-            "name": "Ouverture",
-            "type": "info",
-            "subtype": "binary",
-            "isVisible": 1,
-            "isHistorized": 1,
+            "name": "Ouverture", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
             "configuration": {
-                "class": 48,
-                "value": "",
-                "index": "0",
+                "class": 48, 
+                "value": "", 
+                "index": 0, 
                 "instance": 1
-            },
+            }, 
+            "subtype": "binary", 
             "display": {
-                "invertBinary": "1",
+                "invertBinary": "1", 
                 "generic_type": "OPENING"
-            },
+            }, 
             "template": {
-                "dashboard": "door",
+                "dashboard": "door", 
                 "mobile": "door"
             }
-        },
+        }, 
         {
-            "name": "Température",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "°C",
+            "name": "Température", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 1, 
+                "instance": 1
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "TEMPERATURE"
-            },
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "index": "1",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "°C"
+        }, 
         {
-            "name": "Luminosité",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "%",
+            "name": "Luminosité", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 3, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BRIGHTNESS"
-            },
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "maxValue": 100,
-                "minValue": 0,
-                "index": "3",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "%"
+        }, 
         {
-            "name": "Sabotage",
-            "type": "info",
-            "subtype": "binary",
-            "isVisible": 1,
-            "isHistorized": 1,
+            "name": "Sabotage", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
             "configuration": {
-                "class": 113,
-                "value": "",
-                "calculValueOffset": "#value#==3",
-                "index": "10",
-                "instance": 1
-            },
+                "class": 113, 
+                "value": "", 
+                "index": 10, 
+                "instance": 1,
+                "calculValueOffset": "#value#==3"
+            }, 
+            "subtype": "binary", 
             "display": {
-                "invertBinary": "1",
+                "invertBinary": "1", 
                 "generic_type": "SABOTAGE"
             },
             "template": {
-                "dashboard": "vibration",
-                "mobile": "vibration"
+                "dashboard": "alert",
+                "mobile": "alert"
             }
-        },
+        }, 
         {
-            "name": "Batterie",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 0,
-            "isHistorized": 0,
-            "unite": "%",
+            "name": "Batterie", 
+            "type": "info", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 128, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BATTERY"
-            },
-            "configuration": {
-                "class": 128,
-                "value": "",
-                "index": "0",
-                "instance": 1
-            }
+            }, 
+            "unite": "%"
         }
     ]
 }

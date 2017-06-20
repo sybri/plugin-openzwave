@@ -1,64 +1,66 @@
 {
-    "name": "TZ68e",
-    "doc": "",
-    "type": "Prise",
-    "comlink": "",
-    "remark": "Vendu aussi sous la marque TkbHome",
-    "imglink": "tkb.tz68e",
+    "name": "TZ68e", 
+    "type": "Prise", 
+    "comlink": "", 
+    "remark": "Vendu aussi sous la marque TkbHome", 
+    "imglink": "tkb.tz68e", 
     "commands": [
         {
-            "name": "On",
-            "type": "action",
-            "subtype": "other",
+            "name": "On", 
+            "type": "action", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 37, 
+                "value": "type=setvalue&value=255", 
+                "index": 0, 
+                "instance": 1
+            }, 
+            "value": "Etat", 
+            "subtype": "other", 
             "display": {
                 "generic_type": "ENERGY_ON"
-            },
-            "isVisible": 1,
-            "value": "Etat",
-            "configuration": {
-                "class": 37,
-                "value": "type=setvalue&value=255",
-                "instance": 1,
-                "index": "0"
-            },
+            }, 
             "template": {
-                "dashboard": "light",
+                "dashboard": "light", 
                 "mobile": "light"
             }
-        },
+        }, 
         {
-            "name": "Off",
-            "type": "action",
-            "subtype": "other",
+            "name": "Off", 
+            "type": "action", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 37, 
+                "value": "type=setvalue&value=0", 
+                "index": 0, 
+                "instance": 1
+            }, 
+            "value": "Etat", 
+            "subtype": "other", 
             "display": {
                 "generic_type": "ENERGY_OFF"
-            },
-            "isVisible": 1,
-            "value": "Etat",
-            "configuration": {
-                "class": 37,
-                "value": "type=setvalue&value=0",
-                "instance": 1,
-                "index": "0"
-            },
+            }, 
             "template": {
-                "dashboard": "light",
+                "dashboard": "light", 
                 "mobile": "light"
             }
-        },
+        }, 
         {
-            "name": "Etat",
-            "type": "info",
+            "name": "Etat", 
+            "type": "info", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 37, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1
+            }, 
+            "subtype": "binary", 
             "display": {
                 "generic_type": "ENERGY_STATE"
-            },
-            "subtype": "binary",
-            "isVisible": 0,
-            "configuration": {
-                "class": 37,
-                "value": "",
-                "instance": 1,
-                "index": "0"
             }
         }
     ]

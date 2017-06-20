@@ -1,80 +1,80 @@
 {
-    "name": "EZMotion+ 3in1",
-    "doc": "",
-    "type": "Multicapteurs",
-    "comlink": "",
-    "remark": "",
-    "imglink": "homeseer.ezmotion3en1",
-    "battery_type": "3x1.5V AAA",
-    "ignore": 0,
+    "name": "EZMotion+ 3in1", 
+    "type": "Multicapteurs", 
+    "comlink": "", 
+    "remark": "", 
+    "imglink": "homeseer.ezmotion3en1", 
     "commands": [
         {
-            "name": "Présence",
-            "type": "info",
-            "subtype": "binary",
-            "isVisible": 1,
+            "name": "Présence", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
             "configuration": {
-                "class": 48,
-                "value": "",
-                "instance": 1,
-                "index": "0"
-            },
+                "class": 48, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1
+            }, 
+            "subtype": "binary", 
             "display": {
                 "invertBinary": "1"
-            },
+            }, 
             "template": {
-                "dashboard": "presence",
+                "dashboard": "presence", 
                 "mobile": "presence"
             }
-        },
+        }, 
         {
-            "name": "Température",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
+            "name": "Température", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 1, 
+                "instance": 1
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "TEMPERATURE"
-            },
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "instance": 1,
-                "index": "1"
             }
-        },
+        }, 
         {
-            "name": "Luminosité",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
+            "name": "Luminosité", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 3, 
+                "instance": 1
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BRIGHTNESS"
-            },
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "instance": 1,
-                "index": "3"
             }
-        },
+        }, 
         {
-            "name": "Batterie",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 0,
-            "isHistorized": 0,
-            "unite": "%",
+            "name": "Batterie", 
+            "type": "info", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 128, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BATTERY"
-            },
-            "configuration": {
-                "class": 128,
-                "value": "",
-                "maxValue": 100,
-                "minValue": 0,
-                "instance": 1,
-                "index": "0"
-            }
+            }, 
+            "unite": "%"
         }
     ]
 }

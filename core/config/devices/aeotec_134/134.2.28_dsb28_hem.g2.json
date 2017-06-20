@@ -1,339 +1,338 @@
 {
-    "name": "Home Energy Meter 2nd Edition (DSB28)",
-    "doc": "",
-    "type": "Consommation",
-    "comlink": "281-aeon-labs-compteur-de-consommation-electrique-z-wave-3c-60a-version-g2-1220000011670",
-    "remark": "",
-    "imglink": "aeotec.dsb28",
+    "name": "Home Energy Meter 2nd Edition (DSB28)", 
+    "type": "Consommation", 
+    "comlink": "281-aeon-labs-compteur-de-consommation-electrique-z-wave-3c-60a-version-g2-1220000011670", 
+    "remark": "", 
+    "imglink": "aeotec.dsb28", 
     "commands": [
         {
-            "name": "Consommation totale",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "KWh",
+            "name": "Consommation totale", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "CONSUMPTION"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "minValue": 0,
-                "instance": 1,
-                "index": "0"
-            }
-        },
+            }, 
+            "unite": "KWh"
+        }, 
         {
-            "name": "Consommation phase 1",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "KWh",
+            "name": "Consommation phase 1", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 0, 
+                "instance": 2, 
+                "minValue": 0
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "CONSUMPTION"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "minValue": 0,
-                "instance": 2,
-                "index": "0"
-            }
-        },
+            }, 
+            "unite": "KWh"
+        }, 
         {
-            "name": "Consommation phase 2",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "KWh",
+            "name": "Consommation phase 2", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 0, 
+                "instance": 3, 
+                "minValue": 0
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "CONSUMPTION"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "minValue": 0,
-                "instance": 3,
-                "index": "0"
-            }
-        },
+            }, 
+            "unite": "KWh"
+        }, 
         {
-            "name": "Consommation phase 3",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "KWh",
+            "name": "Consommation phase 3", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 0, 
+                "instance": 4, 
+                "minValue": 0
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "CONSUMPTION"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "minValue": 0,
-                "instance": 4,
-                "index": "0"
-            }
-        },
+            }, 
+            "unite": "KWh"
+        }, 
         {
-            "name": "Puissance totale",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "W",
+            "name": "Puissance totale", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 8, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 12000
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "POWER"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 12000,
-                "minValue": 0,
-                "instance": 1,
-                "index": "8"
-            }
-        },
+            }, 
+            "unite": "W"
+        }, 
         {
-            "name": "Puissance phase 1",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "W",
+            "name": "Puissance phase 1", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 8, 
+                "instance": 2, 
+                "minValue": 0, 
+                "maxValue": 12000
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "POWER"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 12000,
-                "minValue": 0,
-                "instance": 2,
-                "index": "8"
-            }
-        },
+            }, 
+            "unite": "W"
+        }, 
         {
-            "name": "Puissance phase 2",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "W",
+            "name": "Puissance phase 2", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 8, 
+                "instance": 3, 
+                "minValue": 0, 
+                "maxValue": 12000
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "POWER"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 12000,
-                "minValue": 0,
-                "instance": 3,
-                "index": "8"
-            }
-        },
+            }, 
+            "unite": "W"
+        }, 
         {
-            "name": "Puissance phase 3",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "W",
+            "name": "Puissance phase 3", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 8, 
+                "instance": 4, 
+                "minValue": 0, 
+                "maxValue": 12000
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "POWER"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 12000,
-                "minValue": 0,
-                "instance": 4,
-                "index": "8"
-            }
-        },
+            }, 
+            "unite": "W"
+        }, 
         {
-            "name": "Tension totale",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "V",
+            "name": "Tension totale", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 16, 
+                "instance": 1, 
+                "minValue": 220, 
+                "maxValue": 240
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "VOLTAGE"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 240,
-                "minValue": 220,
-                "instance": 1,
-                "index": "16"
-            }
-        },
+            }, 
+            "unite": "V"
+        }, 
         {
-            "name": "Tension phase 1",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "V",
+            "name": "Tension phase 1", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 16, 
+                "instance": 2, 
+                "minValue": 220, 
+                "maxValue": 240
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "VOLTAGE"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 240,
-                "minValue": 220,
-                "instance": 2,
-                "index": "16"
-            }
-        },
+            }, 
+            "unite": "V"
+        }, 
         {
-            "name": "Tension phase 2",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "V",
+            "name": "Tension phase 2", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 16, 
+                "instance": 3, 
+                "minValue": 220, 
+                "maxValue": 240
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "VOLTAGE"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 240,
-                "minValue": 220,
-                "instance": 3,
-                "index": "16"
-            }
-        },
+            }, 
+            "unite": "V"
+        }, 
         {
-            "name": "Tension phase 3",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "V",
+            "name": "Tension phase 3", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 16, 
+                "instance": 4, 
+                "minValue": 220, 
+                "maxValue": 240
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "VOLTAGE"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 240,
-                "minValue": 220,
-                "instance": 4,
-                "index": "16"
-            }
-        },
+            }, 
+            "unite": "V"
+        }, 
         {
-            "name": "Intensité totale",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "A",
+            "name": "Intensité totale", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 20, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 200
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "DONT"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 200,
-                "minValue": 0,
-                "instance": 1,
-                "index": "20"
-            }
-        },
+            }, 
+            "unite": "A"
+        }, 
         {
-            "name": "Intensité phase 1",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "A",
+            "name": "Intensité phase 1", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 20, 
+                "instance": 2, 
+                "minValue": 0, 
+                "maxValue": 60
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "DONT"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 60,
-                "minValue": 0,
-                "instance": 2,
-                "index": "20"
-            }
-        },
+            }, 
+            "unite": "A"
+        }, 
         {
-            "name": "Intensité phase 2",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "A",
+            "name": "Intensité phase 2", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 20, 
+                "instance": 3, 
+                "minValue": 0, 
+                "maxValue": 60
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "DONT"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 60,
-                "minValue": 0,
-                "instance": 3,
-                "index": "20"
-            }
-        },
+            }, 
+            "unite": "A"
+        }, 
         {
-            "name": "Intensité phase 3",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "A",
+            "name": "Intensité phase 3", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 50, 
+                "value": "", 
+                "index": 20, 
+                "instance": 4, 
+                "minValue": 0, 
+                "maxValue": 60
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "DONT"
-            },
-            "configuration": {
-                "class": 50,
-                "value": "",
-                "maxValue": 60,
-                "minValue": 0,
-                "instance": 4,
-                "index": "20"
-            }
+            }, 
+            "unite": "A"
         }
-    ],
+    ], 
     "recommended": {
         "params": [
             {
-                "index": 101,
+                "index": 101, 
                 "value": 1794
-            },
+            }, 
             {
-                "index": 102,
+                "index": 102, 
                 "value": 14337
-            },
+            }, 
             {
-                "index": 103,
+                "index": 103, 
                 "value": 458756
-            },
+            }, 
             {
-                "index": 111,
+                "index": 111, 
                 "value": 120
-            },
+            }, 
             {
-                "index": 112,
+                "index": 112, 
                 "value": 1800
-            },
+            }, 
             {
-                "index": 113,
+                "index": 113, 
                 "value": 14400
             }
-        ],
+        ], 
         "needswakeup": false
     }
 }

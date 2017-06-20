@@ -13,6 +13,8 @@ def value_added(network, node, value):
 def value_removed(network, node, value):
 	if node.node_id in globals.not_supported_nodes:
 		return
+	if value == None:
+		return
 	if value.value_id in globals.pending_configurations:
 		del globals.pending_configurations[value.value_id]
 
@@ -46,8 +48,9 @@ def prepare_value_notification(node, value):
 			if value.type == 'Short':
 				data = utils.normalize_short_value(value.data)
 			pending.data = data
-	if not node.is_ready:
+	if not node.is_ready and value.command_class not in [globals.COMMAND_CLASS_CENTRAL_SCENE or value.command_class, globals.COMMAND_CLASS_SCENE_ACTIVATION]:
 		if hasattr(value, 'lastData') and value.lastData == value.data:
+			# we skip notification to avoid value refresh during the interview process
 			return
 	value.lastData = value.data
 	if value.genre == 'System':
@@ -111,31 +114,45 @@ def changes_value_polling(intensity, value):
 def set_config(_node_id, _index_id, _value, _size):
 	utils.can_execute_command(0)
 	utils.check_node_exist(_node_id)
-	if _size == 0:
-		_size = 2
 	if _size > 4:
 		_size = 4
-	logging.info('Set_config 2 for nodeId : '+str(_node_id)+' index : '+str(_index_id)+', value : '+str(_value)+', size : '+str(_size))	
+	if _size not in [0, 1, 2, 4]:
+		_size = 1
+	logging.info('set_config for nodeId : %s index : %s, value : %s, size : %s' % (_node_id, _index_id, _value, _size))
+	wake_up_time = node_utils.get_wake_up_interval(_node_id)
+	if wake_up_time is None :
+		wake_up_time = 0 
+	wake_up_time += 10
 	for value_id in globals.network.nodes[_node_id].get_values(class_id=globals.COMMAND_CLASS_CONFIGURATION, genre='All', type='All', readonly=False, writeonly='All'):
 		if globals.network.nodes[_node_id].values[value_id].index == _index_id:
 			value = _value.replace("@", "/")
 			my_value = globals.network.nodes[_node_id].values[value_id]
 			if my_value.type == 'Button':
 				if value.lower() == 'true':
-					globals.network.manager.pressButton(my_value.value_id)
+					result = globals.network.manager.pressButton(my_value.value_id)
 				else:
-					globals.network.manager.releaseButton(my_value.value_id)
-			elif my_value.type == 'List':
-				globals.network.manager.setValue(value_id, value)
-				mark_pending_change(my_value, value)
+					result = globals.network.manager.releaseButton(my_value.value_id)
+			elif my_value.type == 'List' and _size == 0:
+				# list item must be a string, the size must be set to 0
+				result = globals.network.manager.setValue(value_id, value)
+				mark_pending_change(my_value, value,wake_up_time)
 			elif my_value.type == 'Bool':
 				value = globals.network.nodes[_node_id].values[value_id].check_data(value)
-				globals.network.manager.setValue(value_id, value)
-				mark_pending_change(my_value, value)
+				result = globals.network.manager.setValue(value_id, value)
+				mark_pending_change(my_value, value,wake_up_time)
 			else:
-				value = globals.network.nodes[_node_id].values[value_id].check_data(value)
-				globals.network.nodes[_node_id].set_config_param(_index_id, value, _size)
-				if my_value is not None:
-					mark_pending_change(my_value, value)
+				# recommend parameters size is set to 0, for list item value handling
+				if _size == 0:
+					_size = 1
+				# set a parameter list item with value or not configured device
+				result = globals.network.nodes[_node_id].set_config_param(_index_id, int(value), _size)
+				# don't mark list item if set with value
+				if my_value is not None and my_value.type != 'List':
+					mark_pending_change(my_value, value,wake_up_time)
+			logging.debug('set_configuration result: %s' % (result,))
 			return
-	raise Exception('Configuration index : '+str(_index_id)+' not found')
+
+	if _value.isdigit() and globals.network.nodes[_node_id].set_config_param(_index_id, int(_value), _size):
+		logging.debug('set_configuration device without defined parameters')
+	else:
+		raise Exception('Configuration index : '+str(_index_id)+' not found')

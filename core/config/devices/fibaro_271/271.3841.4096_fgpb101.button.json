@@ -1,87 +1,99 @@
 {
-    "name": "FGPB101 Button",
-    "doc": "",
-    "type": "Contrôleur",
-    "comlink": "3701-fibaro-bouton-de-commande-the-button-z-wave-blanc--5902020528968",
-    "remark": "",
-    "imglink": "fibaro.fgpb101",
-    "battery_type": "1X ER14250 3,6V",
-    "ignore": 0,
+    "name": "FGPB101 Button", 
+    "type": "Contrôleur", 
+    "comlink": "3701-fibaro-bouton-de-commande-the-button-z-wave-blanc--5902020528968", 
+    "remark": "Partiellement compatible: Fonctionne en association directe seulement", 
+    "imglink": "fibaro.fgpb101", 
+    "ignore": false,
     "commands": [
         {
-            "name": "SceneNumber",
+            "name": "Scene",
             "type": "info",
-            "subtype": "numeric",
             "isVisible": 0,
             "isHistorized": 0,
-            "unite": "",
-            "display": {
-                "generic_type": "DONT"
-            },
             "configuration": {
                 "class": 91,
                 "value": "",
-                "repeatEventManagement" : "always",
-                "index": "128",
-                "instance": 1
+                "index": 128,
+                "instance": 1,
+                "repeatEventManagement": "always"
+            },
+            "subtype": "numeric",
+            "display": {
+                "generic_type": "DONT"
+            },
+            "unite": "",
+            "template": {
+                "dashboard": "badge",
+                "mobile": "badge"
             }
         },
-         {
+        {
             "name": "SceneID",
             "type": "info",
-            "subtype": "numeric",
             "isVisible": 0,
             "isHistorized": 0,
-            "unite": "",
-            "display": {
-                "generic_type": "DONT"
-            },
             "configuration": {
                 "class": 91,
                 "value": "",
-                "repeatEventManagement" : "always",
-                "index": "2",
-                "instance": 1
+                "index": 2,
+                "instance": 1,
+                "repeatEventManagement": "always"
+            },
+            "subtype": "numeric",
+            "display": {
+                "generic_type": "DONT"
+            },
+            "unite": "",
+            "template": {
+                "dashboard": "badge",
+                "mobile": "badge"
             }
         },
         {
             "name": "SceneAttribute",
             "type": "info",
-            "subtype": "string",
             "isVisible": 0,
             "isHistorized": 0,
-            "unite": "",
-            "display": {
-                "generic_type": "DONT"
-            },
             "configuration": {
                 "class": 91,
                 "value": "",
-                "repeatEventManagement" : "always",
-                "index": "1",
-                "instance": 1
+                "index": 1,
+                "instance": 1,
+                "repeatEventManagement": "always"
+            },
+            "subtype": "string",
+            "display": {
+                "generic_type": "DONT"
+            },
+            "unite": "",
+            "template": {
+                "dashboard": "badge",
+                "mobile": "badge"
             }
         },
         {
-            "name": "Batterie",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 0,
-            "isHistorized": 0,
-            "unite": "%",
+            "name": "Batterie", 
+            "type": "info", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 128, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BATTERY"
-            },
-            "configuration": {
-                "class": 128,
-                "value": "",
-                "index": "0",
-                "instance": 1
-            }
+            }, 
+            "unite": "%"
         }
-    ],
+    ], 
     "recommended": {
-        "wakeup": 7200,
+        "wakeup": 7200, 
         "needswakeup": true
     }
 }

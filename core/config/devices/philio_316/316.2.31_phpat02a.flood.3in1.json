@@ -1,85 +1,85 @@
 {
-    "name": "PAT02-C Flood Sensor",
-    "doc": "",
-    "type": "Multicapteurs",
-    "comlink": "3152-zipato-detecteur-d-inondation-3-en-1-z-wave-plus-3858890733112",
-    "remark": "Vendu aussi sous la marque Zipato",
-    "imglink": "philio.phpat02",
-    "battery_type": "1x3V CR123A",
+    "name": "PAT02-C Flood Sensor", 
+    "type": "Multicapteurs", 
+    "comlink": "3152-zipato-detecteur-d-inondation-3-en-1-z-wave-plus-3858890733112", 
+    "remark": "Vendu aussi sous la marque Zipato", 
+    "imglink": "philio.phpat02", 
     "commands": [
         {
-            "name": "Fuite",
-            "type": "info",
-            "subtype": "binary",
-            "isVisible": 1,
-            "isHistorized": 1,
+            "name": "Fuite", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
             "configuration": {
-                "class": 113,
-                "value": "",
-                "instance": 1,
-                "index": "8"
-            },
+                "class": 113, 
+                "value": "", 
+                "index": 8, 
+                "instance": 1
+            }, 
+            "subtype": "binary", 
             "display": {
-                "invertBinary": "1",
+                "invertBinary": "1", 
                 "generic_type": "FLOOD"
-            },
+            }, 
             "template": {
-                "dashboard": "inondation",
+                "dashboard": "inondation", 
                 "mobile": "inondation"
             }
-        },
+        }, 
         {
-            "name": "Température",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 0,
-            "unite": "°C",
+            "name": "Température", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 1, 
+                "instance": 1
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "TEMPERATURE"
-            },
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "instance": 1,
-                "index": "1"
-            }
-        },
+            }, 
+            "unite": "°C"
+        }, 
         {
-            "name": "Humidité",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 0,
-            "unite": "%",
+            "name": "Humidité", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 5, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "HUMIDITY"
-            },
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "maxValue": 100,
-                "minValue": 0,
-                "instance": 1,
-                "index": "5"
-            }
-        },
+            }, 
+            "unite": "%"
+        }, 
         {
-            "name": "Batterie",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 0,
-            "isHistorized": 0,
-            "unite": "%",
+            "name": "Batterie", 
+            "type": "info", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 128, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BATTERY"
-            },
-            "configuration": {
-                "class": 128,
-                "value": "",
-                "instance": 1,
-                "index": "0"
-            }
+            }, 
+            "unite": "%"
         }
     ]
 }

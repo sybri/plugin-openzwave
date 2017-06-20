@@ -1,41 +1,40 @@
 {
-    "name": "RaZberry Controller",
-    "doc": "",
-    "type": "Contrôleur",
-    "comlink": "",
-    "remark": "",
-    "imglink": "zwaveme.razberry",
-    "battery_type": "",
-    "isVisible": 0,
+    "name": "RaZberry Controller", 
+    "type": "Contrôleur", 
+    "comlink": "", 
+    "remark": "", 
+    "imglink": "zwaveme.razberry", 
     "commands": [
         {
-            "name": "Switch All On",
-            "type": "action",
-            "subtype": "other",
+            "name": "Switch All On", 
+            "type": "action", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 240, 
+                "value": "type=switchall&value=255", 
+                "index": 0, 
+                "instance": 1
+            }, 
+            "subtype": "other", 
             "display": {
                 "generic_type": "DONT"
-            },
-            "isVisible": 0,
-            "value": "",
-            "configuration": {
-                "class": 240,
-                "value": "type=switchall&value=255",
-                "instance": 1
             }
-        },
+        }, 
         {
-            "name": "Switch All Off",
-            "type": "action",
-            "subtype": "other",
+            "name": "Switch All Off", 
+            "type": "action", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 240, 
+                "value": "type=switchall&value=0", 
+                "index": 0, 
+                "instance": 1
+            }, 
+            "subtype": "other", 
             "display": {
                 "generic_type": "DONT"
-            },
-            "isVisible": 0,
-            "value": "",
-            "configuration": {
-                "class": 240,
-                "value": "type=switchall&value=0",
-                "instance": 1
             }
         }
     ]

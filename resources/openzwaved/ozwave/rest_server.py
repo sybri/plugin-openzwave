@@ -299,6 +299,7 @@ class NodeHandler(RequestHandler):
 			else:
 				self.write(utils.format_json_result())
 		except Exception,e:
+			logging.error('RequestHandler ' + e.message)
 			self.write(utils.format_json_result(success="error",data=str(e)))
 
 class BackupHandler(RequestHandler):

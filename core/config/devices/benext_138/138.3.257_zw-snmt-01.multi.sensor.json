@@ -1,85 +1,85 @@
 {
-    "name": "MoLite Sensor",
-    "doc": "",
-    "type": "Multicapteurs",
-    "comlink": "",
-    "remark": "",
-    "imglink": "benext.molite",
-    "battery_type": "2x1.5V AAA",
+    "name": "MoLite Sensor", 
+    "type": "Multicapteurs", 
+    "comlink": "", 
+    "remark": "", 
+    "imglink": "benext.molite", 
     "commands": [
         {
-            "name": "Présence",
-            "type": "info",
-            "subtype": "binary",
-            "isVisible": 1,
-            "isHistorized": 1,
+            "name": "Présence", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
             "configuration": {
-                "class": 48,
-                "value": "",
-                "index": "0",
+                "class": 48, 
+                "value": "", 
+                "index": 0, 
                 "instance": 1
-            },
+            }, 
+            "subtype": "binary", 
             "display": {
-                "invertBinary": "1",
+                "invertBinary": "1", 
                 "generic_type": "PRESENCE"
-            },
+            }, 
             "template": {
-                "dashboard": "presence",
+                "dashboard": "presence", 
                 "mobile": "presence"
             }
-        },
+        }, 
         {
-            "name": "Température",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "°C",
+            "name": "Température", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 1, 
+                "instance": 1
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "TEMPERATURE"
-            },
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "index": "1",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "°C"
+        }, 
         {
-            "name": "Luminosité",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 1,
-            "isHistorized": 1,
-            "unite": "Lux",
+            "name": "Luminosité", 
+            "type": "info", 
+            "isVisible": 1, 
+            "isHistorized": 1, 
+            "configuration": {
+                "class": 49, 
+                "value": "", 
+                "index": 3, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 1000
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BRIGHTNESS"
-            },
-            "configuration": {
-                "class": 49,
-                "value": "",
-                "maxValue": 1000,
-                "minValue": 0,
-                "index": "3",
-                "instance": 1
-            }
-        },
+            }, 
+            "unite": "Lux"
+        }, 
         {
-            "name": "Batterie",
-            "type": "info",
-            "subtype": "numeric",
-            "isVisible": 0,
-            "isHistorized": 0,
-            "unite": "%",
+            "name": "Batterie", 
+            "type": "info", 
+            "isVisible": 0, 
+            "isHistorized": 0, 
+            "configuration": {
+                "class": 128, 
+                "value": "", 
+                "index": 0, 
+                "instance": 1, 
+                "minValue": 0, 
+                "maxValue": 100
+            }, 
+            "subtype": "numeric", 
             "display": {
                 "generic_type": "BATTERY"
-            },
-            "configuration": {
-                "class": 128,
-                "value": "",
-                "index": "0",
-                "instance": 1
-            }
+            }, 
+            "unite": "%"
         }
     ]
 }
