@@ -36,8 +36,20 @@ if (!isConnect()) {
     <tbody>
     <tr>
         <?php
-        $data = openzwave::callOpenzwave('/ZWaveAPI/Run/devices[' . init('logical_id') . ']', init('serverId'));
-        $data = $data['instances'][0]['commandClasses'][99]['data'];
+        /*
+        $eqLogic =  openzwave::byId(init('logical_id'));
+        $manufacturer_id = $eqLogic->getConfiguration('manufacturer_id');
+        $product_type= $eqLogic->getConfiguration('product_type') ;
+        $product_id= $eqLogic->getConfiguration('product_id');
+        
+         echo 'manufacturer_id:'.$manufacturer_id;
+         echo 'product_type:'.$product_type;
+         echo 'product_id:'.$product_id;
+        */
+        
+        $data = openzwave::callOpenzwave('/node?node_id='.init('logical_id').'&type=info&info=all');
+        $data = $data['result']['instances'][1]['commandClasses'][99]['data'];
+
         for ($i = 1; $i < 11; $i++) {
             echo '<td>';
             echo '<a class="btn btn-success pull-right btn-xs bt_ziptatoKeypadSaveNewCode" data-position="' . $i . '"><i class="fa fa-floppy-o"></i></a>';
@@ -58,18 +70,23 @@ if (!isConnect()) {
     $('#bt_refreshZipatoAssist').on('click',function(){
         $('#md_modal').load('index.php?v=d&plugin=openzwave&modal=device.assistant&id=<?php echo init('id');?>&serverId=<?php echo init('serverId');?>&logical_id=<?php echo init('logical_id');?>');
     });
-
+/*
+manufacturer_id:151
+product_type:24881
+product_id:17665
+ */
     $('.bt_ziptatoKeypadRemoveCode').on('click',function(){
         var position = $(this).attr('data-position');
         bootbox.confirm('Etes vous sur de vouloir supprimer ce code ?', function (result) {
             var call = '/ZWaveAPI/Run/devices[<?php echo init('logical_id');?>].UserCode.SetRaw('+position+',[00000000000000000000],1)';
+            call='node?node_id=<?php echo init('logical_id');?>&type=setRaw&slot_id='+position+'&value0=00000000000000000000';
             if (result) {
                 $.ajax({// fonction permettant de faire de l'ajax
                     type: "POST", // méthode de transmission des données au fichier php
                     url: "plugins/openzwave/core/ajax/openzwave.ajax.php", // url du fichier php
                     data: {
                         action: "callRazberry",
-                        serverId : <?php echo init('serverId');?>,
+                       
                         call: call,
                     },
                     dataType: 'json',
@@ -98,8 +115,9 @@ if (!isConnect()) {
                 url: "plugins/openzwave/core/ajax/openzwave.ajax.php", // url du fichier php
                 data: {
                     action: "callRazberry",
-                    serverId : <?php echo init('serverId');?>,
-                    call: '/ZWaveAPI/Run/devices[<?php echo init('logical_id');?>]',
+                   
+                    //call: '/ZWaveAPI/Run/devices[<?php echo init('logical_id');?>]',
+                    call: '/node?node_id=<?php echo init('logical_id');?>&type=info&info=all'
                 },
                 dataType: 'json',
                 error: function (request, status, error) {
@@ -110,14 +128,15 @@ if (!isConnect()) {
                         $('#div_configureDeviceAlert').showAlert({message: data.result, level: 'danger'});
                         return;
                     }
-                    var code = data.result.instances[0].commandClasses[99].data[0].val;
+                    var code = data.result.result.instances[1].commandClasses[99].data[0].val;
                     var call = '/ZWaveAPI/Run/devices['+configureDeviceLogicalId+'].UserCode.SetRaw('+position+',['+code+'],1)';
+                     call='node?node_id=<?php echo init('logical_id');?>&type=setRaw&slot_id='+position+'&value0='+code+'';
                     $.ajax({// fonction permettant de faire de l'ajax
                         type: "POST", // méthode de transmission des données au fichier php
                         url: "plugins/openzwave/core/ajax/openzwave.ajax.php", // url du fichier php
                         data: {
                             action: "callRazberry",
-                            serverId : <?php echo init('serverId');?>,
+                           
                             call: call,
                         },
                         dataType: 'json',
